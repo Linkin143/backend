@@ -1,10 +1,9 @@
 import express from 'express';
-import { createMessage } from '../controllers/message.controller';
+import { createMessage } from '../controllers/messageController.js';
+import { messageValidation } from '../middleware/validator.js';
 
 const router = express.Router();
 
-// @route   POST /api/messages
-// @desc    Send a message and trigger automated emails
-router.post('/', createMessage);
+router.post('/', messageValidation, createMessage);
 
 export default router;

@@ -1,14 +1,10 @@
 import express from 'express';
-import { getApprovedFeedback, submitFeedback } from '../controllers/feedback.controller';
+import { getApprovedFeedback, submitFeedback } from '../controllers/feedbackController.js';
+import { feedbackValidation } from '../middleware/validator.js';
 
 const router = express.Router();
 
-// @route   POST /api/feedback
-// @desc    Submit new client feedback
-router.post('/', submitFeedback);
-
-// @route   GET /api/feedback
-// @desc    Get all feedback to display on the frontend
+router.post('/', feedbackValidation, submitFeedback);
 router.get('/', getApprovedFeedback);
 
 export default router;
