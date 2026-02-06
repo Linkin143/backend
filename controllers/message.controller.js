@@ -1,4 +1,4 @@
-import Message from '../models/Message.js';
+import Message from '../models/message.js';
 import { sendContactEmails } from '../utils/emailService.js';
 
 export const createMessage = async (req, res) => {
