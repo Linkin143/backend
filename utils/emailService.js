@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
 import nodemailer from 'nodemailer';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+dotenv.config();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const transporter = nodemailer.createTransport({
