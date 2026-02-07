@@ -1,4 +1,3 @@
-import dns from "dns";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import path from "path";
@@ -10,7 +9,6 @@ if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.FOUNDER_E
     throw new Error("Missing EMAIL_USER, EMAIL_PASS, or FOUNDER_EMAIL in .env");
 }
 
-dns.setDefaultResultOrder("ipv4first");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
