@@ -11,18 +11,15 @@ if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.FOUNDER_E
 const PRIMARY_COLOR = "#005fb8";
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,       
-  family: 4,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  connectionTimeout: 20_000,
-  greetingTimeout: 20_000,
-  socketTimeout: 20_000,
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
 });
+
+
+
 
 
 export const sendContactEmails = async (data) => {
