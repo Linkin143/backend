@@ -1,7 +1,5 @@
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
-import path from "path";
-import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -10,21 +8,23 @@ if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.FOUNDER_E
 }
 
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 const LOGO_URL = "https://princyshahconsulting.in/assets/PSC_logo-TtvDBtkc.jpeg";
 const PRIMARY_COLOR = "#005fb8";
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    family: 4,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    },
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,       
+  family: 4,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  connectionTimeout: 20_000,
+  greetingTimeout: 20_000,
+  socketTimeout: 20_000,
 });
+
 
 export const sendContactEmails = async (data) => {
     /* ---------- CLIENT EMAIL ---------- */
