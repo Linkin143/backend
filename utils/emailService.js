@@ -65,7 +65,8 @@ export const sendContactEmails = async (data) => {
     </div>
   </div>`;
 
-    const from = "Princy Shah Consulting <onboarding@resend.dev>";
+
+    const from = "Princy Shah Consulting <hello@princyshahconsulting.in>";
 
     return Promise.all([
         resend.emails.send({
@@ -79,9 +80,10 @@ export const sendContactEmails = async (data) => {
             from,
             to: process.env.FOUNDER_EMAIL,
             subject: `🚀 New Lead: ${data.firstName} from ${data.company || "Direct"}`,
-            replyTo: data.email, // replying goes directly to the lead
+            replyTo: data.email, // replies go directly to the lead
             html: adminHtml,
         }),
     ]);
+
 
 };
