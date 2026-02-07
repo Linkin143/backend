@@ -1,11 +1,11 @@
 import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
-import connectDB from './config/db.js';
+import connectDB from './configs/db.js';
 
 // Route imports
-import feedbackRoutes from './routes/feedbackRoutes.js';
-import messageRoutes from './routes/messageRoutes.js';
+import feedbackRoutes from './routes/feedback.route.js';
+import messageRoutes from './routes/message.route.js';
 
 const app = express();
 

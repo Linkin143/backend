@@ -1,6 +1,6 @@
 import express from 'express';
-import { getApprovedFeedback, submitFeedback } from '../controllers/feedbackController.js';
-import { feedbackValidation } from '../middleware/validator.js';
+import { getApprovedFeedback, submitFeedback } from '../controllers/feedback.controller.js';
+import { feedbackValidation } from '../middlewares/validator.middleware.js';
 
 const router = express.Router();
 
