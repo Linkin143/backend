@@ -11,7 +11,7 @@ export const sendContactEmails = async (data) => {
     <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #e1e8ed;">
       <div style="background: linear-gradient(135deg, ${PRIMARY_COLOR} 0%, #003366 100%); padding: 40px; text-align: center;">
         <h1 style="color: #ffffff; margin: 0; font-size: 28px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Pricy Shah Consulting</h1>
-        <h1 style="color: #ffffff; margin: 0; font-size: 28px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Thank You, ${data.firstName}!</h1>
+        <h4 style="color: #ffffff; margin: 0; font-size: 28px; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Thank You, ${data.firstName}!</h4>
       </div>
       <div style="padding: 40px; color: #334155; line-height: 1.6;">
         <div style="background: #ffffff; border-radius: 15px; padding: 25px; box-shadow: inset 0 0 10px rgba(0,0,0,0.02); border: 1px solid #f1f5f9;">
