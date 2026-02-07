@@ -8,7 +8,6 @@ if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.FOUNDER_E
 }
 
 
-const LOGO_URL = "https://princyshahconsulting.in/assets/PSC_logo-TtvDBtkc.jpeg";
 const PRIMARY_COLOR = "#005fb8";
 
 const transporter = nodemailer.createTransport({
@@ -32,8 +31,9 @@ export const sendContactEmails = async (data) => {
   <div style="background-color:#f0f4f8;padding:40px 10px;font-family:Segoe UI,Tahoma,sans-serif">
     <div style="max-width:600px;margin:auto;background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e1e8ed">
       <div style="background:linear-gradient(135deg,${PRIMARY_COLOR},#003366);padding:40px;text-align:center">
-        <img src="${LOGO_URL}" alt="Logo" style="width:80px;margin-bottom:20px">
-        <h1 style="color:#fff;margin:0;font-size:28px">Thank You, ${data.firstName}!</h1>
+        
+        <h1 style="color:#fff;margin:0;font-size:28px">Princy Shah Consulting</h1>
+        <h3 style="color:#fff;margin:0;font-size:28px">Thank You, ${data.firstName}!</h3>
       </div>
 
       <div style="padding:40px;color:#334155">
