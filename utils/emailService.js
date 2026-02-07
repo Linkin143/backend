@@ -8,16 +8,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // Use SSL
-    service: 'gmail',
+    port: 587,
+    secure: false, 
     auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        pass: process.env.EMAIL_PASS // No spaces here
     },
     tls: {
-        // This ensures the connection doesn't fail on local network resolution
-        rejectUnauthorized: false
+        rejectUnauthorized: false // Helps bypass cloud network restrictions
     }
 });
 

@@ -1,7 +1,9 @@
 import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
+import dns from 'node:dns';
 import connectDB from './configs/db.js';
+dns.setDefaultResultOrder('ipv4first');
 
 // Route imports
 import feedbackRoutes from './routes/feedback.route.js';
