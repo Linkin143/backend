@@ -7,7 +7,7 @@ const PRIMARY_COLOR = "#005fb8";
 const WEBSITE_URL = "https://princyshahconsulting.in";
 const LOGO_URL = "https://princyshahconsulting.in/assets/PSC_logo-TtvDBtkc.jpeg"; 
 
-const FROM_EMAIL = "Princy Shah Consulting <support@princyshahconsulting.in>";
+const FROM_EMAIL = "Princy Shah Consulting <princy@princyshahconsulting.in>";
 const REPLY_TO = "princyshahconsulting@gmail.com";
 
 export const sendContactEmails = async (data) => {
